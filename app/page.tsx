@@ -14,7 +14,7 @@ const SERVICES: Record<Lang, [string, string, string, string][]> = {
     ["✦", "Indoor air quality", "Filtration, airflow, and humidity fixes for cleaner, more comfortable indoor air.", "indoor-air-quality"],
     ["≋", "Ductwork inspection & repair", "Airflow diagnostics and duct repair for uneven cooling and weak vents.", "ductwork"],
     ["▦", "Light commercial HVAC", "Responsive service and maintenance for offices, retail, restaurants, and rooftop units.", "commercial-hvac"],
-    ["⌁", "System diagnostics", "Careful troubleshooting to find the real cause — from capacitors to compressors.", "ac-repair"],
+    ["❆", "Refrigeration", "Service and repair for walk-in coolers, freezers, reach-in units, and ice machines.", "refrigeration"],
   ],
   es: [
     ["❄", "Reparación y diagnóstico de AC", "Respuestas claras cuando su sistema deja de enfriar, y reparaciones bien hechas desde la primera vez.", "ac-repair"],
@@ -25,7 +25,7 @@ const SERVICES: Record<Lang, [string, string, string, string][]> = {
     ["✦", "Calidad del aire interior", "Soluciones de filtración, flujo de aire y humedad para un aire interior más limpio y cómodo.", "indoor-air-quality"],
     ["≋", "Inspección y reparación de ductos", "Diagnóstico de flujo de aire y reparación de ductos para enfriamiento desigual y rejillas débiles.", "ductwork"],
     ["▦", "HVAC comercial ligero", "Servicio y mantenimiento ágil para oficinas, comercios, restaurantes y unidades de azotea.", "commercial-hvac"],
-    ["⌁", "Diagnóstico del sistema", "Diagnóstico cuidadoso para encontrar la causa real, desde capacitores hasta compresores.", "ac-repair"],
+    ["❆", "Refrigeración", "Servicio y reparación de cámaras frigoríficas, congeladores, refrigeradores comerciales y máquinas de hielo.", "refrigeration"],
   ],
 };
 
@@ -121,7 +121,7 @@ const T = {
     maintP: "Seasonal maintenance keeps your system running efficiently and helps catch small issues before they turn into breakdowns. Plans can be tailored to your home or property as ACM grows.",
     maintLink: "See maintenance plans", planTitle: "Seasonal system care", planSmall: "Plan details and member benefits are editable by ACM.",
     commLabel: "LIGHT COMMERCIAL HVAC", commH2: "Reliable comfort for the place you work.",
-    commP: "ACM services offices, retail, restaurants, and small commercial properties — including packaged rooftop units (RTUs) — with responsive scheduling and recurring maintenance.",
+    commP: "ACM services offices, retail, restaurants, and small commercial properties — including packaged rooftop units (RTUs) and commercial refrigeration — with responsive scheduling and recurring maintenance.",
     commQuote: "Get a commercial quote", commCaption: "Packaged rooftop units (RTUs) — commercial service & maintenance",
     payLabel: "ONLINE PAYMENTS", payH2: "Pay your invoice", payEm: "securely.",
     payP: "Submit a deposit, balance, invoice, or service payment through ACM’s secure payment portal.",
@@ -132,7 +132,7 @@ const T = {
     cCallLabel: "CALL ACM", cTextLabel: "TEXT ACM", cTextVal: "Start a conversation", cReqLabel: "REQUEST SERVICE", cReqVal: "Tell us what’s going on",
     footTagline: "Family-owned HVAC service for Florida homes and light commercial properties.",
     footServices: "Services", footCompany: "Company", footPolicies: "Policies",
-    fServiceLinks: ["AC repair", "Installation", "Maintenance", "Commercial HVAC"],
+    fServiceLinks: ["AC repair", "Installation", "Maintenance", "Commercial HVAC", "Refrigeration"],
     fCompanyLinks: ["About ACM", "Maintenance Plans", "Payments", "Contact"],
     fPolicyLinks: ["Privacy", "Terms of Service", "Payment Policy", "Accessibility"],
     footBottomTag: "Family-Owned HVAC Service.",
@@ -166,7 +166,7 @@ const T = {
     maintP: "El mantenimiento de temporada mantiene su sistema funcionando de forma eficiente y ayuda a detectar problemas pequeños antes de que se conviertan en averías. Los planes se pueden adaptar a su hogar o propiedad a medida que ACM crece.",
     maintLink: "Ver planes de mantenimiento", planTitle: "Cuidado del sistema por temporada", planSmall: "Los detalles del plan y los beneficios para miembros pueden ser editados por ACM.",
     commLabel: "HVAC COMERCIAL LIGERO", commH2: "Confort confiable para su lugar de trabajo.",
-    commP: "ACM atiende oficinas, comercios, restaurantes y pequeñas propiedades comerciales, incluidas unidades empaquetadas de azotea (RTU), con citas ágiles y mantenimiento recurrente.",
+    commP: "ACM atiende oficinas, comercios, restaurantes y pequeñas propiedades comerciales, incluidas unidades empaquetadas de azotea (RTU) y refrigeración comercial, con citas ágiles y mantenimiento recurrente.",
     commQuote: "Solicitar cotización comercial", commCaption: "Unidades empaquetadas de azotea (RTU): servicio y mantenimiento comercial",
     payLabel: "PAGOS EN LÍNEA", payH2: "Pague su factura", payEm: "de forma segura.",
     payP: "Realice un depósito, saldo, factura o pago de servicio a través del portal de pago seguro de ACM.",
@@ -177,7 +177,7 @@ const T = {
     cCallLabel: "LLAME A ACM", cTextLabel: "ENVÍE UN MENSAJE", cTextVal: "Inicie una conversación", cReqLabel: "SOLICITAR SERVICIO", cReqVal: "Cuéntenos qué sucede",
     footTagline: "Servicio de HVAC familiar para hogares y propiedades comerciales ligeras en Florida.",
     footServices: "Servicios", footCompany: "Empresa", footPolicies: "Políticas",
-    fServiceLinks: ["Reparación de AC", "Instalación", "Mantenimiento", "HVAC comercial"],
+    fServiceLinks: ["Reparación de AC", "Instalación", "Mantenimiento", "HVAC comercial", "Refrigeración"],
     fCompanyLinks: ["Sobre ACM", "Planes de mantenimiento", "Pagos", "Contacto"],
     fPolicyLinks: ["Privacidad", "Términos de servicio", "Política de pagos", "Accesibilidad"],
     footBottomTag: "Servicio de HVAC familiar.",
@@ -284,7 +284,7 @@ export default function Home() {
 
     <section id="contact" className="contact"><div><BrandLogo light /><h2>{t.contactH2}</h2><p>{t.contactP}</p></div><div className="contact-actions"><a href="tel:+19542784733"><span>{t.cCallLabel}</span><b>(954) 278-4733</b><i>→</i></a><a href="sms:+19542784733"><span>{t.cTextLabel}</span><b>{t.cTextVal}</b><i>→</i></a><a href="#request"><span>{t.cReqLabel}</span><b>{t.cReqVal}</b><i>→</i></a></div></section>
 
-    <footer><div><BrandLogo light /><p>{t.footTagline}</p></div><div><h4>{t.footServices}</h4><a href="/ac-repair">{t.fServiceLinks[0]}</a><a href="/ac-installation">{t.fServiceLinks[1]}</a><a href="/ac-maintenance">{t.fServiceLinks[2]}</a><a href="/commercial-hvac">{t.fServiceLinks[3]}</a></div><div><h4>{t.footCompany}</h4><a href="/about-acm">{t.fCompanyLinks[0]}</a><a href="/maintenance-plans">{t.fCompanyLinks[1]}</a><a href="/payments">{t.fCompanyLinks[2]}</a><a href="#contact">{t.fCompanyLinks[3]}</a></div><div><h4>{t.footPolicies}</h4><a href="/privacy">{t.fPolicyLinks[0]}</a><a href="/terms">{t.fPolicyLinks[1]}</a><a href="/payment-policy">{t.fPolicyLinks[2]}</a><a href="/accessibility">{t.fPolicyLinks[3]}</a></div><div className="footer-bottom">© {new Date().getFullYear()} ACM Pure Life Services LLC <span>{t.footBottomTag}</span></div></footer>
+    <footer><div><BrandLogo light /><p>{t.footTagline}</p></div><div><h4>{t.footServices}</h4><a href="/ac-repair">{t.fServiceLinks[0]}</a><a href="/ac-installation">{t.fServiceLinks[1]}</a><a href="/ac-maintenance">{t.fServiceLinks[2]}</a><a href="/commercial-hvac">{t.fServiceLinks[3]}</a><a href="/refrigeration">{t.fServiceLinks[4]}</a></div><div><h4>{t.footCompany}</h4><a href="/about-acm">{t.fCompanyLinks[0]}</a><a href="/maintenance-plans">{t.fCompanyLinks[1]}</a><a href="/payments">{t.fCompanyLinks[2]}</a><a href="#contact">{t.fCompanyLinks[3]}</a></div><div><h4>{t.footPolicies}</h4><a href="/privacy">{t.fPolicyLinks[0]}</a><a href="/terms">{t.fPolicyLinks[1]}</a><a href="/payment-policy">{t.fPolicyLinks[2]}</a><a href="/accessibility">{t.fPolicyLinks[3]}</a></div><div className="footer-bottom">© {new Date().getFullYear()} ACM Pure Life Services LLC <span>{t.footBottomTag}</span></div></footer>
 
     <div className="mobile-bar"><a href="tel:+19542784733">{t.mb[0]}</a><a href="sms:+19542784733">{t.mb[1]}</a><a className="mobile-request" href="#request">{t.mb[2]}</a><a href="#pay">{t.mb[3]}</a></div>
   </main>;
