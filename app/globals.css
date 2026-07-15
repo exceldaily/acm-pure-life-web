@@ -184,19 +184,25 @@ nav {
 nav a:hover { color: var(--amber-lt); }
 .header-cta { padding: 12px 18px; white-space: nowrap; }
 
-/* ---- brand logo (inline SVG mark + wordmark) ---- */
-.logo { display: inline-flex; align-items: center; gap: 12px; line-height: 1; }
-.logo-mark { width: 46px; height: 46px; flex: none; }
+/* ---- brand logo (inline SVG mark + 3-line wordmark) ---- */
+.logo { display: inline-flex; align-items: center; gap: 10px; line-height: 1; }
+.logo-mark { width: 50px; height: 50px; flex: none; }
 .logo-word b {
-  font-family: Oswald, sans-serif; font-weight: 700; font-size: 25px;
-  letter-spacing: .04em; color: var(--char); line-height: .92; display: block;
+  display: block; font-family: Manrope, Arial, sans-serif; font-weight: 800;
+  font-size: 21px; letter-spacing: .02em; color: #16395f; line-height: .95;
+}
+.logo-word em {
+  display: block; font-style: normal; font-family: Manrope, Arial, sans-serif;
+  font-weight: 800; font-size: 11px; letter-spacing: .04em; color: #16395f;
+  margin-top: 1px; line-height: 1.05;
 }
 .logo-word small {
-  display: block; font-size: 8px; letter-spacing: .19em;
-  color: var(--muted); font-weight: 700; margin-top: 4px; text-transform: uppercase;
+  display: block; font-family: Manrope, Arial, sans-serif; font-weight: 800;
+  font-size: 7.5px; letter-spacing: .16em; color: #3f6182; margin-top: 2px;
+  text-transform: uppercase; line-height: 1;
 }
-.logo-light .logo-word b { color: #fff; }
-.logo-light .logo-word small { color: #c3cad2; }
+.logo-light .logo-word b, .logo-light .logo-word em { color: #fff; }
+.logo-light .logo-word small { color: #b9c6d2; }
 
 /* ---- hero ---- */
 .hero {
@@ -505,8 +511,10 @@ footer div:not(:first-child) a:hover { color: var(--amber-lt); }
   .topline-right > a { display: none; }
   header { height: 66px; padding: 0 18px; gap: 12px; }
   .header-cta { font-size: 9px; padding: 11px 12px; }
-  .logo-mark { width: 40px; height: 40px; }
-  .logo-word b { font-size: 22px; }
+  .logo-mark { width: 42px; height: 42px; }
+  .logo-word b { font-size: 17px; }
+  .logo-word em { font-size: 9px; }
+  .logo-word small { font-size: 6.5px; }
   .hero { padding: 58px 20px 30px; min-height: auto; }
   .hero-copy { padding-right: 0; }
   .hero-photo { background-position: 70% center; }
