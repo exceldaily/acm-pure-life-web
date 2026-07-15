@@ -190,25 +190,25 @@ function BrandLogo({ light = false }: { light?: boolean }) {
     <a className={`logo ${light ? "logo-light" : ""}`} href="#top" aria-label="ACM Pure Life Services LLC — home">
       <svg className="logo-mark" viewBox="0 0 100 100" role="img" aria-hidden="true">
         <defs>
-          <linearGradient id="acmHouse" x1="0.85" y1="1" x2="0.15" y2="0">
-            <stop offset="0" stopColor="#5b5bd6" />
-            <stop offset="0.38" stopColor="#2c7cc4" />
-            <stop offset="1" stopColor="#ec7623" />
+          <linearGradient id="acmHouse" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stopColor="#2b7de1" />
+            <stop offset="0.48" stopColor="#7a5ad8" />
+            <stop offset="1" stopColor="#f5811f" />
           </linearGradient>
         </defs>
-        <path d="M25,84 L25,46 L50,21 L75,46 L75,84 L58,84 L50,73 L42,84 Z" fill="none" stroke="url(#acmHouse)" strokeWidth="7" strokeLinejoin="round" strokeLinecap="round" />
-        <g stroke="#2b7bbf" strokeWidth="2.6" strokeLinecap="round">
+        <path d="M20,86 L20,42 L50,13 L80,42 L80,86 L63,86 L50,66 L37,86 Z" fill="none" stroke="url(#acmHouse)" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round" />
+        <g stroke="#2aa7eb" strokeWidth="3" strokeLinecap="round">
           {[0, 60, 120, 180, 240, 300].map(a => (
-            <g key={a} transform={`rotate(${a} 37 54)`}>
-              <line x1="37" y1="54" x2="37" y2="41.5" />
-              <line x1="37" y1="44.5" x2="33.8" y2="41.6" />
-              <line x1="37" y1="44.5" x2="40.2" y2="41.6" />
-              <line x1="37" y1="49" x2="34.2" y2="46.4" />
-              <line x1="37" y1="49" x2="39.8" y2="46.4" />
+            <g key={a} transform={`rotate(${a} 36 52)`}>
+              <line x1="36" y1="52" x2="36" y2="38.5" />
+              <line x1="36" y1="42" x2="32.6" y2="38.9" />
+              <line x1="36" y1="42" x2="39.4" y2="38.9" />
+              <line x1="36" y1="46.6" x2="33.2" y2="44" />
+              <line x1="36" y1="46.6" x2="38.8" y2="44" />
             </g>
           ))}
         </g>
-        <path d="M62,37 C67,44 71,49 71,55 C71,61 66.5,65.5 61.5,65.5 C56.5,65.5 52,61.5 52,55.5 C52,51.5 54,48.5 56.5,46 C56.8,48.6 58,50.6 60,51.6 C58.5,46.5 59.5,41.5 62,37 Z" fill="#ec7623" />
+        <path d="M62.5,38 C68,45 72,50 72,56 C72,62 67.3,66 62,66 C56.7,66 52,62 52,56.3 C52,52.5 53.8,49.6 56.4,47 C56.8,49.8 58.2,51.8 60.3,52.6 C58.9,47.7 60.1,42.5 62.5,38 Z" fill="#f5811f" />
       </svg>
       <span className="logo-word"><b>ACM</b><em>PURE LIFE</em><small>SERVICES LLC</small></span>
     </a>
