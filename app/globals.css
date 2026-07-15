@@ -512,9 +512,9 @@ footer div:not(:first-child) a:hover { color: var(--amber-lt); }
   .hero-photo { background-position: 70% center; }
   .hero-actions { flex-direction: column; }
   .hero-actions .button { width: 100%; }
-  .trustline { gap: 0; margin-top: 28px; }
-  .trustline span { padding: 4px 14px 4px 0; }
-  .trustline span + span { padding-left: 14px; }
+  .trustline { flex-direction: column; align-items: flex-start; gap: 0; margin-top: 28px; }
+  .trustline span { padding: 5px 0; }
+  .trustline span + span { border-left: 0; padding-left: 0; }
   .intro, .service-section, .issues, .about, .reasons, .maintenance, .payment, .process-band, .commercial-copy, .contact { padding: 58px 20px; }
   .service-grid, .steps, .issues ul, .about-facts { grid-template-columns: 1fr; }
   .issues ul { gap: 0; }
