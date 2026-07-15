@@ -197,18 +197,18 @@ function BrandLogo({ light = false }: { light?: boolean }) {
           </linearGradient>
         </defs>
         <path d="M20,86 L20,42 L50,13 L80,42 L80,86 L63,86 L50,66 L37,86 Z" fill="none" stroke="url(#acmHouse)" strokeWidth="8" strokeLinejoin="round" strokeLinecap="round" />
-        <g stroke="#2aa7eb" strokeWidth="3" strokeLinecap="round">
+        <g stroke="#2aa7eb" strokeWidth="2.7" strokeLinecap="round">
           {[0, 60, 120, 180, 240, 300].map(a => (
-            <g key={a} transform={`rotate(${a} 36 52)`}>
-              <line x1="36" y1="52" x2="36" y2="38.5" />
-              <line x1="36" y1="42" x2="32.6" y2="38.9" />
-              <line x1="36" y1="42" x2="39.4" y2="38.9" />
-              <line x1="36" y1="46.6" x2="33.2" y2="44" />
-              <line x1="36" y1="46.6" x2="38.8" y2="44" />
+            <g key={a} transform={`rotate(${a} 37.5 52.5)`}>
+              <line x1="37.5" y1="52.5" x2="37.5" y2="42" />
+              <line x1="37.5" y1="44.6" x2="34.9" y2="42.2" />
+              <line x1="37.5" y1="44.6" x2="40.1" y2="42.2" />
+              <line x1="37.5" y1="48.2" x2="35.3" y2="46.2" />
+              <line x1="37.5" y1="48.2" x2="39.7" y2="46.2" />
             </g>
           ))}
         </g>
-        <path d="M62.5,38 C68,45 72,50 72,56 C72,62 67.3,66 62,66 C56.7,66 52,62 52,56.3 C52,52.5 53.8,49.6 56.4,47 C56.8,49.8 58.2,51.8 60.3,52.6 C58.9,47.7 60.1,42.5 62.5,38 Z" fill="#f5811f" />
+        <path d="M62.4,41 C66.8,46.5 70,50.6 70,55.4 C70,60.3 66.2,63.7 61.9,63.7 C57.6,63.7 53.8,60.3 53.8,55.7 C53.8,52.6 55.2,50.2 57.3,48.1 C57.7,50.3 58.8,51.9 60.5,52.6 C59.4,48.6 60.4,44.6 62.4,41 Z" fill="#f5811f" />
       </svg>
       <span className="logo-word"><b>ACM</b><em>PURE LIFE</em><small>SERVICES LLC</small></span>
     </a>
