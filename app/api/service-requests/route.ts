@@ -1,0 +1,2 @@
+import { NextResponse } from "next/server";
+export async function POST(request: Request) { const form = await request.formData(); const name = String(form.get("name") || "").trim(); const phone = String(form.get("phone") || "").trim(); const email = String(form.get("email") || "").trim(); if (!name || !phone || !/^\S+@\S+\.\S+$/.test(email)) return NextResponse.json({ error: "Please provide a name, phone number, and valid email." }, { status: 400 }); return NextResponse.json({ ok: true, message: "Request received" }, { status: 201 }); }
